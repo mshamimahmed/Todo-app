@@ -1,0 +1,31 @@
+<div class="container col-md-8 col-md-offset-2">
+    <div [routerLink]="['/profile']" class="col-md-12" style="padding: 20px 20px 20px 0px;float: right;cursor: pointer;">
+       <img  src="../../assets/template/dist/img/avatar.png" class="img-circle" alt="Cinque Terre" width="40" height="40"> 
+       <p >Kundan Kumar Mahto</p>
+    </div>
+    <h3 align="center">Notebook App</h3>
+
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" style="float: right;">+</button>
+    <br><br>
+    <div id="demo" class="collapse">
+        <div class="form-group ">
+            <input type="text" class="form-control" id="usr" [(ngModel)]="title"  placeholder="Title"> 
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" rows="5" id="comment"  [(ngModel)]="description" placeholder="Description" style="resize: none;"></textarea>
+        </div>
+        <h5>{{warningMessage}}</h5>
+        <button type="button"  class="btn btn-success" (click)="addTodo()" style="margin:auto;display:block;">Submit</button>
+    </div>
+    <br>
+    <div class="list-group">
+        <a class="list-group-item" *ngFor="let todolist of todolists">
+        <span  (click)="showNoteDetails(todolist._id)"  >
+          <h4 class="list-group-item-heading">{{todolist.title}} </h4>
+          <p class="list-group-item-text">{{todolist.desc}}  <span style="float: right;">{{todolist.createdAt}}</span></p>
+        </span>
+        </a>
+     </div>
+    
+
+</div>

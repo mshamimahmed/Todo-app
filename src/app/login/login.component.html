@@ -1,0 +1,26 @@
+<body class="login-page">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="3"><b>Login Here</b></a>
+      </div>
+      <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form action="#" (ngSubmit)="onLogIn()">
+          <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="Mobile Number"  [(ngModel)]="eamil"  name="phoneno"/>
+            <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password"  name="password"/>
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <p>{{warningMessage}}</p>
+          <div class="row">
+            <div class="col-xs-12">
+              <button type="submit" class="btn btn-primary btn-block btn-flat" >Login</button>
+            </div>
+          </div>
+        </form>
+     </div>
+    </div>
+ </body>
